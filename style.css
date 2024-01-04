@@ -20,6 +20,11 @@
   
   body {
     font-family: 'Helvetica', sans-serif;
+    background-image: url('images/pexels-brigitte-tohm-291629.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
   .coffee-image {
