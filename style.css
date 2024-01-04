@@ -19,7 +19,7 @@ body {
   .header {
     text-align: center;
     color: #3E2723; /* Dark brown text color */
-    background-color: rgba(255, 235, 205, 0.8); /* Light peach background */
+    background-color: rgba(255, 235, 205, 0.5); /* Light peach background */
     padding: 20px;
     font-weight: bold;
     border-bottom: 2px solid #795548; /* Dark brown border */
@@ -44,7 +44,7 @@ body {
   .coffee-image {
     margin-right: 20px;
     margin-top: 10px;
-    width: 100%;
+    width: 100px;
     border-radius: 10px;
     float: right;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle box shadow */
