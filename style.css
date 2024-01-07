@@ -1,67 +1,92 @@
 body {
-    font-family: 'Helvetica', sans-serif;
-    background-image: url('images/coffee-2589759_1920.jpg');
-    height: 100vh;
-    margin: 0;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  font-family: 'Lobster', cursive;
+  background-image: url('images/coffee-2589759_1920.jpg');
+  height: 100vh;
+  margin: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+  z-index: -1;
+}
+
+h1, .header {
+  font-size: 36px;
+  text-align: center;
+  color: #4E342E; /* Rich brown text color */
+  margin-top: 0;
+  text-decoration: underline;
+}
+
+.header {
+  text-align: center;
+  background-color: rgba(255, 235, 205, 0.5); /* Light peach background */
+  padding: 20px;
+  font-weight: bold;
+  border-bottom: 2px solid #795548; /* Dark brown border */
+}
+
+.menu-list {
+  background-color: #FFF8E1; /* Light yellow background */
+  padding: 30px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 600px; /* Limit width for better readability */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  position: relative; /* Added for positioning children relative to this container */
+}
+
+.menu-item {
+  display: block;
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.menu-item:hover {
+  background-color: #FFD54F; /* Light amber background on hover */
+}
+
+.coffee-image-container {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  list-style: none; /* Remove bullet point */
+}
+
+.coffee-image {
+  width: 100px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle box shadow */
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 24px;
   }
 
-  h1 {
-    font-size: 36px;
-    text-align: center;
-    color: #3E2723; /* Dark brown text color */
-    margin-top: 0;
-    text-decoration: underline;
+  body {
+    background-size: 120%;
   }
-  
-  .header {
-    text-align: center;
-    color: #3E2723; /* Dark brown text color */
-    background-color: rgba(255, 235, 205, 0.5); /* Light peach background */
-    padding: 20px;
-    font-weight: bold;
-    border-bottom: 2px solid #795548; /* Dark brown border */
-  }
-  
+
   .menu-list {
-    background-color: #FFF8E1; /* Light yellow background */
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px auto;
-    max-width: 600px; /* Limit width for better readability */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    padding: 40px;
   }
-  
-  .menu-item {
-    display: block;
-    font-size: 18px;
-    text-align: left;
-    margin-bottom: 10px;
-  }
-  
+
   .coffee-image {
-    margin-right: 20px;
-    margin-top: 10px;
-    width: 100px;
-    border-radius: 10px;
-    float: right;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle box shadow */
+    width: 150px;
   }
-  
-  /* Responsive Styles */
-  @media only screen and (min-width: 768px) {
-    body {
-      background-size: 120%;
-    }
-    
-    .menu-list {
-      padding: 40px;
-    }
-    
-    .coffee-image {
-      width: 150px;
-    }
-  }
-  
+}
